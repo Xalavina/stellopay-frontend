@@ -5,10 +5,10 @@
   "packageManager": "npm@10.9.7",
   "scripts": {
     "preinstall": "node scripts/check-package-manager.js",
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "dev": "node api.js && next dev --turbopack",
+    "build": "node api.js && next build",
     "analyze": "ANALYZE=true next build",
-    "start": "next start",
+    "start": "node api.js && next start",
     "lint": "next lint",
     "test": "vitest run --coverage",
     "test:watch": "vitest",
